@@ -17,26 +17,22 @@ class StockHeaderCell: UITableViewCell {
     let changeLabel = UILabel()
     let percentLabel = UILabel()
     let priceLabel = UILabel()
-
+    lazy var stack = UIStackView(arrangedSubviews: [
+        stockLabel, volLabel, frqLabel, prevLabel, changeLabel, percentLabel, priceLabel
+    ])
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        let stack = UIStackView(arrangedSubviews: [
-            stockLabel, volLabel, frqLabel, prevLabel, changeLabel, percentLabel, priceLabel
-        ])
+        setupView()
+    }
+    
+    private func setupView() {
         stack.axis = .horizontal
         stack.distribution = .fillEqually
-        
-        contentView.addSubview(stack)
+        stack.spacing = 4
         stack.translatesAutoresizingMaskIntoConstraints = false
-        self.contentView.backgroundColor = .white
-
-        NSLayoutConstraint.activate([
-            stack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            stack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
-            stack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
-            stack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8)
-        ])
+        contentView.backgroundColor = .systemBackground
 
         stockLabel.text = "STOCK"
         volLabel.text = "VOL"
@@ -45,14 +41,32 @@ class StockHeaderCell: UITableViewCell {
         changeLabel.text = "+/-"
         percentLabel.text = "%"
         priceLabel.text = "PRICE"
-
-        [stockLabel, volLabel, frqLabel, prevLabel, changeLabel, percentLabel, priceLabel].forEach {
-            $0.font = UIFont.boldSystemFont(ofSize: 14)
-            $0.textAlignment = .center
+        
+        stack.arrangedSubviews.forEach { view in
+            let label = view as? UILabel
+            label?.font = UIFont.boldSystemFont(ofSize: 12)
+            label?.textAlignment = .right
+            label?.adjustsFontSizeToFitWidth = true
+            label?.minimumScaleFactor = 0.5
+            label?.numberOfLines = 1
+            label?.textColor = .systemOrange
         }
+        stockLabel.textAlignment = .left
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
+        contentView.addSubview(stack)
+        NSLayoutConstraint.activate([
+            stack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
+            stack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            stack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
+            stack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8)
+        ])
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        setupView()
     }
 }

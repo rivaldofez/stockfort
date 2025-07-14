@@ -3,8 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 63;
 	objects = {
+
+/* Begin PBXBuildFile section */
+		7EBC1DA32E2488AF0090F93B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC1D9A2E2488AF0090F93B /* Assets.xcassets */; };
+		7EBC1DA52E2488AF0090F93B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC1D9D2E2488AF0090F93B /* LaunchScreen.storyboard */; };
+		7EBC1DA62E2488AF0090F93B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC1D9F2E2488AF0090F93B /* Main.storyboard */; };
+		7EBC1DA72E2488AF0090F93B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1D992E2488AF0090F93B /* AppDelegate.swift */; };
+		7EBC1DA82E2488AF0090F93B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DA02E2488AF0090F93B /* SceneDelegate.swift */; };
+		7EBC1DA92E2488AF0090F93B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DA12E2488AF0090F93B /* ViewController.swift */; };
+		7EBC1DAC2E2488B80090F93B /* StockFortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DAA2E2488B80090F93B /* StockFortTests.swift */; };
+		7EBC1DB02E2488BB0090F93B /* StockFortUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DAD2E2488BB0090F93B /* StockFortUITests.swift */; };
+		7EBC1DB12E2488BB0090F93B /* StockFortUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DAE2E2488BB0090F93B /* StockFortUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		7E4739272E24834300341520 /* PBXContainerItemProxy */ = {
@@ -27,23 +39,17 @@
 		7E4739102E24834200341520 /* StockFort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockFort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4739262E24834300341520 /* StockFortTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockFortTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E4739302E24834300341520 /* StockFortUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockFortUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EBC1D992E2488AF0090F93B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7EBC1D9A2E2488AF0090F93B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EBC1D9B2E2488AF0090F93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EBC1D9C2E2488AF0090F93B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7EBC1D9E2E2488AF0090F93B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7EBC1DA02E2488AF0090F93B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7EBC1DA12E2488AF0090F93B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EBC1DAA2E2488B80090F93B /* StockFortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFortTests.swift; sourceTree = "<group>"; };
+		7EBC1DAD2E2488BB0090F93B /* StockFortUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFortUITests.swift; sourceTree = "<group>"; };
+		7EBC1DAE2E2488BB0090F93B /* StockFortUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFortUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		7E4739382E24834300341520 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 7E47390F2E24834200341520 /* StockFort */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		7E4739122E24834200341520 /* StockFort */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (7E4739382E24834300341520 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StockFort; sourceTree = "<group>"; };
-		7E4739292E24834300341520 /* StockFortTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = StockFortTests; sourceTree = "<group>"; };
-		7E4739332E24834300341520 /* StockFortUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = StockFortUITests; sourceTree = "<group>"; };
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7E47390D2E24834200341520 /* Frameworks */ = {
@@ -73,9 +79,9 @@
 		7E4739072E24834200341520 = {
 			isa = PBXGroup;
 			children = (
-				7E4739122E24834200341520 /* StockFort */,
-				7E4739292E24834300341520 /* StockFortTests */,
-				7E4739332E24834300341520 /* StockFortUITests */,
+				7EBC1DA22E2488AF0090F93B /* StockFort */,
+				7EBC1DAB2E2488B80090F93B /* StockFortTests */,
+				7EBC1DAF2E2488BB0090F93B /* StockFortUITests */,
 				7E4739112E24834200341520 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +94,37 @@
 				7E4739302E24834300341520 /* StockFortUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7EBC1DA22E2488AF0090F93B /* StockFort */ = {
+			isa = PBXGroup;
+			children = (
+				7EBC1D992E2488AF0090F93B /* AppDelegate.swift */,
+				7EBC1D9A2E2488AF0090F93B /* Assets.xcassets */,
+				7EBC1D9B2E2488AF0090F93B /* Info.plist */,
+				7EBC1D9D2E2488AF0090F93B /* LaunchScreen.storyboard */,
+				7EBC1D9F2E2488AF0090F93B /* Main.storyboard */,
+				7EBC1DA02E2488AF0090F93B /* SceneDelegate.swift */,
+				7EBC1DA12E2488AF0090F93B /* ViewController.swift */,
+			);
+			path = StockFort;
+			sourceTree = "<group>";
+		};
+		7EBC1DAB2E2488B80090F93B /* StockFortTests */ = {
+			isa = PBXGroup;
+			children = (
+				7EBC1DAA2E2488B80090F93B /* StockFortTests.swift */,
+			);
+			path = StockFortTests;
+			sourceTree = "<group>";
+		};
+		7EBC1DAF2E2488BB0090F93B /* StockFortUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7EBC1DAD2E2488BB0090F93B /* StockFortUITests.swift */,
+				7EBC1DAE2E2488BB0090F93B /* StockFortUITestsLaunchTests.swift */,
+			);
+			path = StockFortUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,9 +141,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				7E4739122E24834200341520 /* StockFort */,
 			);
 			name = StockFort;
 			packageProductDependencies = (
@@ -128,9 +162,6 @@
 			dependencies = (
 				7E4739282E24834300341520 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				7E4739292E24834300341520 /* StockFortTests */,
-			);
 			name = StockFortTests;
 			packageProductDependencies = (
 			);
@@ -150,9 +181,6 @@
 			);
 			dependencies = (
 				7E4739322E24834300341520 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				7E4739332E24834300341520 /* StockFortUITests */,
 			);
 			name = StockFortUITests;
 			packageProductDependencies = (
@@ -210,6 +238,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBC1DA32E2488AF0090F93B /* Assets.xcassets in Resources */,
+				7EBC1DA52E2488AF0090F93B /* LaunchScreen.storyboard in Resources */,
+				7EBC1DA62E2488AF0090F93B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBC1DA72E2488AF0090F93B /* AppDelegate.swift in Sources */,
+				7EBC1DA82E2488AF0090F93B /* SceneDelegate.swift in Sources */,
+				7EBC1DA92E2488AF0090F93B /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBC1DAC2E2488B80090F93B /* StockFortTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EBC1DB02E2488BB0090F93B /* StockFortUITests.swift in Sources */,
+				7EBC1DB12E2488BB0090F93B /* StockFortUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +302,25 @@
 			targetProxy = 7E4739312E24834300341520 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7EBC1D9D2E2488AF0090F93B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EBC1D9C2E2488AF0090F93B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7EBC1D9F2E2488AF0090F93B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EBC1D9E2E2488AF0090F93B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7E47393A2E24834300341520 /* Debug */ = {

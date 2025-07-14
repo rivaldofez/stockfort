@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
@@ -185,7 +185,7 @@
 				};
 			};
 			buildConfigurationList = 7E47390B2E24834200341520 /* Build configuration list for PBXProject "StockFort" */;
-			compatibilityVersion = "Xcode 15.3";
+			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (

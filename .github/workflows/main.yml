@@ -23,6 +23,5 @@ jobs:
           xcodebuild test \
             -project StockFort.xcodeproj \
             -scheme StockFortTests \
-            -destination 'platform=iOS Simulator,OS=latest,name="iPhone SE (3rd generation)"' \
-            -only-testing:StockFortTests \
+            -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
             CODE_SIGNING_ALLOWED=NO

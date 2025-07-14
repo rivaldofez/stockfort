@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		7E4739382E24834300341520 /* Exceptions for "StockFort" folder in "StockFort" target */ = {
+		7E4739382E24834300341520 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -40,24 +40,9 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		7E4739122E24834200341520 /* StockFort */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				7E4739382E24834300341520 /* Exceptions for "StockFort" folder in "StockFort" target */,
-			);
-			path = StockFort;
-			sourceTree = "<group>";
-		};
-		7E4739292E24834300341520 /* StockFortTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = StockFortTests;
-			sourceTree = "<group>";
-		};
-		7E4739332E24834300341520 /* StockFortUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = StockFortUITests;
-			sourceTree = "<group>";
-		};
+		7E4739122E24834200341520 /* StockFort */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (7E4739382E24834300341520 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = StockFort; sourceTree = "<group>"; };
+		7E4739292E24834300341520 /* StockFortTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = StockFortTests; sourceTree = "<group>"; };
+		7E4739332E24834300341520 /* StockFortUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = StockFortUITests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +185,7 @@
 				};
 			};
 			buildConfigurationList = 7E47390B2E24834200341520 /* Build configuration list for PBXProject "StockFort" */;
+			compatibilityVersion = "Xcode 15.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -208,7 +194,6 @@
 			);
 			mainGroup = 7E4739072E24834200341520;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			productRefGroup = 7E4739112E24834200341520 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

@@ -7,12 +7,12 @@
 
 import UIKit
 
-class StockListViewController: UIViewController, UITableViewDataSource {
+class StockListViewController: UIViewController {
     var presenter: StockListPresenter?
     
     var stockData: [Stock] = []
     let tableView = UITableView()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -21,16 +21,17 @@ class StockListViewController: UIViewController, UITableViewDataSource {
         setupTableView()
         loadData()
     }
-
+    
     func setupTableView() {
         view.addSubview(tableView)
         
         tableView.frame = view.bounds
         tableView.dataSource = self
-        tableView.register(StockCell.self, forCellReuseIdentifier: "StockCell")
+        tableView.delegate = self
+        tableView.register(StockItemCell.self, forCellReuseIdentifier: StockItemCell.identifier)
         tableView.rowHeight = 80
     }
-
+    
     func loadData() {
         let url = Bundle.main.url(forResource: "SampleData", withExtension: "json")!
         let data = try! Data(contentsOf: url)
@@ -46,70 +47,55 @@ class StockListViewController: UIViewController, UITableViewDataSource {
         
         tableView.reloadData()
     }
+    
+    
+    
+}
 
-
+extension StockListViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stockData.count
     }
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "StockCell", for: indexPath) as! StockCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: StockItemCell.identifier, for: indexPath) as! StockItemCell
         let stock = stockData[indexPath.row]
         
-        cell.symbolLabel.text = stock.symbol
+        cell.stockLabel.text = stock.symbol
+        cell.volLabel.text = stock.volume
+        cell.frqLabel.text = stock.frequency
+        cell.prevLabel.text = String(stock.previous)
+        cell.changeLabel.text = String(stock.change)
+        cell.percentLabel.text = stock.percentage
         cell.priceLabel.text = String(stock.price)
-        cell.changeLabel.text = "\(stock.change) (\(stock.percentage))"
-        cell.volumeLabel.text = "Vol: \(stock.volume)"
-
+        
         if stock.change > 0 {
+            cell.priceLabel.textColor = .green
             cell.changeLabel.textColor = .green
+            cell.percentLabel.textColor = .green
         } else if stock.change < 0 {
+            cell.priceLabel.textColor = .red
             cell.changeLabel.textColor = .red
+            cell.percentLabel.textColor = .red
         } else {
+            cell.priceLabel.textColor = .black
             cell.changeLabel.textColor = .black
+            cell.percentLabel.textColor = .black
         }
-
+        
         return cell
     }
-}
-
-class StockCell: UITableViewCell {
-    let symbolLabel = UILabel()
-    let priceLabel = UILabel()
-    let changeLabel = UILabel()
-    let volumeLabel = UILabel()
-
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        symbolLabel.font = .boldSystemFont(ofSize: 20)
-        priceLabel.font = .systemFont(ofSize: 20)
-        changeLabel.font = .systemFont(ofSize: 16)
-        volumeLabel.font = .systemFont(ofSize: 14)
-        volumeLabel.textColor = .gray
-        priceLabel.textAlignment = .right
-        changeLabel.textAlignment = .right
-        
-        contentView.addSubview(symbolLabel)
-        contentView.addSubview(priceLabel)
-        contentView.addSubview(changeLabel)
-        contentView.addSubview(volumeLabel)
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        let padding: CGFloat = 16
-        let contentWidth = contentView.bounds.width - (padding * 2)
-        
-        symbolLabel.frame = CGRect(x: padding, y: 10, width: contentWidth * 0.4, height: 24)
-        volumeLabel.frame = CGRect(x: padding, y: 40, width: contentWidth * 0.5, height: 20)
-        
-        priceLabel.frame = CGRect(x: contentWidth * 0.5, y: 10, width: contentWidth * 0.5, height: 24)
-        changeLabel.frame = CGRect(x: contentWidth * 0.5, y: 40, width: contentWidth * 0.5, height: 20)
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = StockHeaderCell()
+        return header.contentView
     }
 }

@@ -27,7 +27,7 @@ class StockListViewController: UIViewController {
     var presenter: StockListPresenter?
 
     /// The main table view displaying the list of stocks.
-    let tableView = UITableView()
+    var tableView = UITableView()
     
     override func viewDidLoad() {
         super.viewDidLoad()

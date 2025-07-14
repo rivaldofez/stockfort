@@ -7,7 +7,20 @@
 
 import Foundation
 
+/// `StockListInteractor` is responsible for fetching a list of stocks from a local JSON file bundled with the app.
+///
+/// This class demonstrates how to load static JSON data, parse it using `JSONSerialization`,
+/// and map each dictionary entry into a `Stock` model.
+///
+/// Example usage:
+/// ```swift
+/// let interactor = StockListInteractor()
+/// let stocks = interactor.fetchStocks()
+/// ```
+///
+/// The JSON file must be named "SampleData.json" and include an array under the `"stocks"` key.
 class StockListInteractor {
+
     func fetchStocks() -> [Stock] {
         guard let url = Bundle.main.url(forResource: "SampleData", withExtension: "json"),
               let data = try? Data(contentsOf: url),

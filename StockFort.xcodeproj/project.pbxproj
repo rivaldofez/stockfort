@@ -11,10 +11,12 @@
 		7EBC1DA52E2488AF0090F93B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC1D9D2E2488AF0090F93B /* LaunchScreen.storyboard */; };
 		7EBC1DA72E2488AF0090F93B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1D992E2488AF0090F93B /* AppDelegate.swift */; };
 		7EBC1DA82E2488AF0090F93B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DA02E2488AF0090F93B /* SceneDelegate.swift */; };
-		7EBC1DA92E2488AF0090F93B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DA12E2488AF0090F93B /* ViewController.swift */; };
+		7EBC1DA92E2488AF0090F93B /* StockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DA12E2488AF0090F93B /* StockListViewController.swift */; };
 		7EBC1DAC2E2488B80090F93B /* StockFortTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DAA2E2488B80090F93B /* StockFortTests.swift */; };
 		7EBC1DB02E2488BB0090F93B /* StockFortUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DAD2E2488BB0090F93B /* StockFortUITests.swift */; };
 		7EBC1DB12E2488BB0090F93B /* StockFortUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DAE2E2488BB0090F93B /* StockFortUITestsLaunchTests.swift */; };
+		7EBC1DB82E24A71C0090F93B /* StockListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DB72E24A7190090F93B /* StockListEntity.swift */; };
+		7EBC1DD92E24A7AD0090F93B /* SampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC1DD82E24A7AD0090F93B /* SampleData.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +45,12 @@
 		7EBC1D9B2E2488AF0090F93B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EBC1D9C2E2488AF0090F93B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EBC1DA02E2488AF0090F93B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7EBC1DA12E2488AF0090F93B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EBC1DA12E2488AF0090F93B /* StockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewController.swift; sourceTree = "<group>"; };
 		7EBC1DAA2E2488B80090F93B /* StockFortTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFortTests.swift; sourceTree = "<group>"; };
 		7EBC1DAD2E2488BB0090F93B /* StockFortUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFortUITests.swift; sourceTree = "<group>"; };
 		7EBC1DAE2E2488BB0090F93B /* StockFortUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFortUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7EBC1DB72E24A7190090F93B /* StockListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListEntity.swift; sourceTree = "<group>"; };
+		7EBC1DD82E24A7AD0090F93B /* SampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleData.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		7EBC1DB32E24A5510090F93B /* Asset */ = {
 			isa = PBXGroup;
 			children = (
+				7EBC1DD72E24A7A30090F93B /* JSON */,
 				7EBC1D9A2E2488AF0090F93B /* Assets.xcassets */,
 			);
 			path = Asset;
@@ -159,9 +164,18 @@
 		7EBC1DB62E24A57C0090F93B /* StockList */ = {
 			isa = PBXGroup;
 			children = (
-				7EBC1DA12E2488AF0090F93B /* ViewController.swift */,
+				7EBC1DB72E24A7190090F93B /* StockListEntity.swift */,
+				7EBC1DA12E2488AF0090F93B /* StockListViewController.swift */,
 			);
 			path = StockList;
+			sourceTree = "<group>";
+		};
+		7EBC1DD72E24A7A30090F93B /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				7EBC1DD82E24A7AD0090F93B /* SampleData.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EBC1DA32E2488AF0090F93B /* Assets.xcassets in Resources */,
+				7EBC1DD92E24A7AD0090F93B /* SampleData.json in Resources */,
 				7EBC1DA52E2488AF0090F93B /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,8 +317,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EBC1DA72E2488AF0090F93B /* AppDelegate.swift in Sources */,
+				7EBC1DB82E24A71C0090F93B /* StockListEntity.swift in Sources */,
 				7EBC1DA82E2488AF0090F93B /* SceneDelegate.swift in Sources */,
-				7EBC1DA92E2488AF0090F93B /* ViewController.swift in Sources */,
+				7EBC1DA92E2488AF0090F93B /* StockListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@ struct Stock {
     let volume: String
     let frequency: String
     let change: Int
+    let previous: Int
     let percentage: String
     let price: Int
 }
@@ -23,6 +24,7 @@ extension Stock {
            let frequency = dict["frequency"] as? String,
            let change = dict["change"] as? Int,
            let percentage = dict["percentage"] as? String,
+           let previous = dict["previous"] as? Int,
            let price = dict["price"] as? Int {
             
             self.symbol = symbol
@@ -31,6 +33,7 @@ extension Stock {
             self.change = change
             self.percentage = percentage
             self.price = price
+            self.previous = previous
         } else {
             return nil
         }

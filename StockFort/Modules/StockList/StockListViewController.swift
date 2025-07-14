@@ -7,8 +7,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
-
+class StockListViewController: UIViewController, UITableViewDataSource {
+    var presenter: StockListPresenter?
+    
     var stockData: [Stock] = []
     let tableView = UITableView()
 

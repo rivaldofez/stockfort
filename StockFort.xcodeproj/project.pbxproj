@@ -17,6 +17,9 @@
 		7EBC1DB12E2488BB0090F93B /* StockFortUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DAE2E2488BB0090F93B /* StockFortUITestsLaunchTests.swift */; };
 		7EBC1DB82E24A71C0090F93B /* StockListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DB72E24A7190090F93B /* StockListEntity.swift */; };
 		7EBC1DD92E24A7AD0090F93B /* SampleData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7EBC1DD82E24A7AD0090F93B /* SampleData.json */; };
+		7EBC1DDB2E24A8150090F93B /* StockListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DDA2E24A8100090F93B /* StockListPresenter.swift */; };
+		7EBC1DDD2E24A8220090F93B /* StockListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DDC2E24A8180090F93B /* StockListRouter.swift */; };
+		7EBC1DDF2E24A8300090F93B /* StockListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBC1DDE2E24A8280090F93B /* StockListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		7EBC1DAE2E2488BB0090F93B /* StockFortUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockFortUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7EBC1DB72E24A7190090F93B /* StockListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListEntity.swift; sourceTree = "<group>"; };
 		7EBC1DD82E24A7AD0090F93B /* SampleData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleData.json; sourceTree = "<group>"; };
+		7EBC1DDA2E24A8100090F93B /* StockListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListPresenter.swift; sourceTree = "<group>"; };
+		7EBC1DDC2E24A8180090F93B /* StockListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListRouter.swift; sourceTree = "<group>"; };
+		7EBC1DDE2E24A8280090F93B /* StockListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,9 @@
 		7EBC1DB62E24A57C0090F93B /* StockList */ = {
 			isa = PBXGroup;
 			children = (
+				7EBC1DDE2E24A8280090F93B /* StockListInteractor.swift */,
+				7EBC1DDC2E24A8180090F93B /* StockListRouter.swift */,
+				7EBC1DDA2E24A8100090F93B /* StockListPresenter.swift */,
 				7EBC1DB72E24A7190090F93B /* StockListEntity.swift */,
 				7EBC1DA12E2488AF0090F93B /* StockListViewController.swift */,
 			);
@@ -317,9 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EBC1DA72E2488AF0090F93B /* AppDelegate.swift in Sources */,
+				7EBC1DDF2E24A8300090F93B /* StockListInteractor.swift in Sources */,
 				7EBC1DB82E24A71C0090F93B /* StockListEntity.swift in Sources */,
 				7EBC1DA82E2488AF0090F93B /* SceneDelegate.swift in Sources */,
 				7EBC1DA92E2488AF0090F93B /* StockListViewController.swift in Sources */,
+				7EBC1DDB2E24A8150090F93B /* StockListPresenter.swift in Sources */,
+				7EBC1DDD2E24A8220090F93B /* StockListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

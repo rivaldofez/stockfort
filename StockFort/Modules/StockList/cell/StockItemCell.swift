@@ -17,36 +17,70 @@ class StockItemCell: UITableViewCell {
     let changeLabel = UILabel()
     let percentLabel = UILabel()
     let priceLabel = UILabel()
+    lazy var stack = UIStackView(arrangedSubviews: [
+        stockLabel, volLabel, frqLabel, prevLabel, changeLabel, percentLabel, priceLabel
+    ])
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-
-        let stack = UIStackView(arrangedSubviews: [
-            stockLabel, volLabel, frqLabel, prevLabel, changeLabel, percentLabel, priceLabel
-        ])
+        setupView()
+    }
+    
+    private func setupView() {
         stack.axis = .horizontal
         stack.distribution = .fillEqually
-
-        contentView.addSubview(stack)
+        stack.spacing = 4
         stack.translatesAutoresizingMaskIntoConstraints = false
-
+        
+        stack.arrangedSubviews.forEach { view in
+            let label = view as? UILabel
+            label?.font = UIFont.boldSystemFont(ofSize: 14)
+            label?.textAlignment = .right
+            label?.adjustsFontSizeToFitWidth = true
+            label?.minimumScaleFactor = 0.5
+            label?.numberOfLines = 1
+        }
+        
+        stockLabel.textAlignment = .left
+        
+        setupConstraints()
+    }
+    
+    private func setupConstraints() {
+        contentView.addSubview(stack)
         NSLayoutConstraint.activate([
             stack.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             stack.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             stack.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8),
             stack.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8)
         ])
-
-        stockLabel.textAlignment = .center
-        volLabel.textAlignment = .center
-        frqLabel.textAlignment = .center
-        prevLabel.textAlignment = .center
-        changeLabel.textAlignment = .center
-        percentLabel.textAlignment = .center
-        priceLabel.textAlignment = .center
+    }
+    
+    func configure(with stock: Stock) {
+        self.stockLabel.text = stock.symbol
+        self.volLabel.text = stock.volume
+        self.frqLabel.text = stock.frequency
+        self.prevLabel.text = String(stock.previous)
+        self.changeLabel.text = String(stock.change)
+        self.percentLabel.text = stock.percentage
+        self.priceLabel.text = String(stock.price)
+        
+        var color: UIColor = .systemGreen
+        if stock.change > 0 {
+            color = .systemGreen
+        } else if stock.change < 0 {
+            color = .systemRed
+        } else {
+            color = .label
+        }
+        
+        self.priceLabel.textColor = color
+        self.changeLabel.textColor = color
+        self.percentLabel.textColor = color
     }
 
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        setupView()
     }
 }
